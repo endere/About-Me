@@ -4,41 +4,38 @@ var confirmquiz = confirm('Hello, would you like to play a game?');
 var correctcount = 0;
 
 if(confirmquiz) {
-  console.log('Awsome! Lets get started!');
-  alert('Awesome! Lets get started!' );
+  console.log('Awsome! Lets get started! Please answer all questions with a Y or N.');
+  alert('Awesome! Lets get started! Please answer all questions with a Y or N.' );
 } else {
-  console.log('Too Bad, starting anyway.');
-  alert('Too bad, starting anyway' );
+  console.log('Too Bad, starting anyway. Please answer all questions with a Y or N.');
+  alert('Too bad, starting anyway. Please answer all questions with a Y or N.' );
 }
 
-var quizResponseOne = prompt('How many pets do I have');
+var quizResponseOne = prompt('Do I have any pets?');
 
-if(quizResponseOne === '2' || quizResponseOne === 'two') {
-  console.log('You are correct! Two kitties!');
-  alert('You are correct! Two kitties!');
+if(quizResponseOne === 'yes' || quizResponseOne.toUpperCase() === 'Y') {
+  console.log('You are correct! I have two kitties!');
+  alert('You are correct! I have two kitties!');
   correctcount++;
-} else if(quizResponseOne === '3' || quizResponseOne === 'three') {
-  console.log('Close, but wrong. I have two cats.');
-  alert('Close, but wrong. I have two cats.' );
 } else {
   console.log('Wrong, I have two cats.');
   alert('Wrong, I have two cats.' );
 }
 
-var quizResponseTwo = prompt('What is my favorite color?');
+var quizResponseTwo = prompt('Is blue my favorite color?');
 
-if(quizResponseTwo === 'blue') {
+if(quizResponseTwo === 'yes' || quizResponseTwo.toUpperCase() === 'Y') {
   console.log('You are correct!');
   alert('You are correct!' );
   correctcount++;
 } else {
-  console.log('Actually, my favorite color is blue.');
-  alert('Actually, my favorite color is blue' );
+  console.log('Actually, it is my favorite color.');
+  alert('Actually, it is my favorite color.' );
 }
 
-var quizResponseThree = prompt('Please Answer with Y or N. Am I from Seattle?');
+var quizResponseThree = prompt(' Am I from Seattle?');
 
-if(quizResponseThree.toUpperCase() === 'Y') {
+if(quizResponseThree === 'yes' || quizResponseThree.toUpperCase() === 'Y') {
   console.log('You are correct! I am from Seattle!');
   alert('You are correct! I am from Seattle!' );
   correctcount++;
@@ -47,21 +44,26 @@ if(quizResponseThree.toUpperCase() === 'Y') {
   alert('Too bad, you are wrong. I am from Seattle.' );
 }
 
-var quizResponseFour = prompt('How old am I?');
+var quizResponseFour = prompt('Am I under six feet tall?');
 
-console.log('You might be right, I\'m not telling.');
-alert('You might be right. I\'m not telling.' );
-//not even in the code am I telling.
-
-var quizResponseFive = prompt('What is my favorite Archimedean solid?');
-
-if(quizResponseFive === 'rhombicosidodecahedron') {
-  console.log('You are correct! How did you know!?');
-  alert('You are correct! How did you know!?' );
+if(quizResponseFour === 'no' || quizResponseFour.toUpperCase() === 'N') {
+  console.log('That\'s right! This was an easy one...');
+  alert('That\'s right! This was an easy one...');
   correctcount++;
 } else {
-  console.log('Good guess! It is actually the rhombicosidodecahedron.');
-  alert('Good guess! It is actually the rhombicosidodecahedron.' );
+  console.log('I actually am about six and a half feet tall... And this was the easy one...');
+  alert('I actually am about six and a half feet tall... And this was the easy one...');
+}
+
+var quizResponseFive = prompt('Is the rhombicuboctahedron my favorite Archimedean solid?');
+
+if(quizResponseFive === 'No' || quizResponseFive.toUpperCase() === 'N') {
+  console.log('You are correct! It\'s the rhombicosidodecahedron!');
+  alert('You are correct! It\'s the rhombicosidodecahedron!');
+  correctcount++;
+} else {
+  console.log('Actually, I prefer the rhombicosidodecahedron.');
+  alert('Actually, I prefer the rhombicosidodecahedron.' );
 }
 
 alert('you have guessed ' + correctcount + ' out of 5 correctly! Thanks for playing!');
