@@ -1,5 +1,17 @@
 *{
-  background-color: gray;
+  text-align: center;
+  font-family: Arial, Verdana, sans-serif;
+  color: #665544;
+}
+html{
+  display: block;
+}
+body{
+}
+#bio{
+  border: 1px solid;
+  font-size: 15px;
+
 }
 .main{
   border: 1px solid;
@@ -9,4 +21,19 @@ div{
   border: 1px solid;
   font-size: 20px;
   margin-top: 20px;
+}
+#main > li{
+  list-style-type: none;
+}
+#menu{
+  list-style-type: none;
+  height: 10px;
+  font-size: 30px;
+  display: inline;
+  width: 60px;
+}
+#menu > li{
+  display: inline;
+}
+  font-size: 20px;
 }
