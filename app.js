@@ -38,9 +38,9 @@ function askYN(i){
 }
 
 function askRandom(){
-  do{
+  do {
     var response = prompt(questions[5]);
-    if(+response === correctAnswers[5]){
+    if (+response === correctAnswers[5]){
       alert(corrects[5]);
       correctcount++;
       break;
