@@ -75,6 +75,13 @@ if(confirmquiz) {
     }else if (i === 6){
       askAnimal(i);
     }
+  }
+
+  alert(name + ', you have guessed ' + correctcount + ' out of 7 correctly! Thanks for playing!');
+}else{
+  alert('Okay! Here is my site!');
+}
+
       /*if (response.toUpperCase() === correctAnswers[i]){
         console.log(corrects[i]);
         alert(corrects[i]);
@@ -116,9 +123,3 @@ if(confirmquiz) {
 
     }
     */
-  }
-
-  alert(name + ', you have guessed ' + correctcount + ' out of 7 correctly! Thanks for playing!');
-}else{
-  alert('Okay! Here is my site!');
-}
