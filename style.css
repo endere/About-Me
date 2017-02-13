@@ -11,11 +11,11 @@ body{
 #bio{
   border: 1px solid;
   font-size: 15px;
-
 }
 .main{
   border: 1px solid;
   font-size: 20px;
+  text-align: left;
 }
 div{
   border: 1px solid;
